@@ -43,7 +43,7 @@ let editId,           // Declaration of a variable named 'editId' (possibly used
                                         <li onclick='deleteTask(${id}, "${filter}")'><i class="uil uil-trash"></i>Delete</li>
                                     </ul>
                                 </div>
-                            </li>`;
+                            </li>;
                 }
             });
         }
@@ -59,5 +59,4 @@ let editId,           // Declaration of a variable named 'editId' (possibly used
     
         // If the height of 'taskBox' is greater than or equal to 300, add the "overflow" class; otherwise, remove it
         taskBox.offsetHeight >= 300 ? taskBox.classList.add("overflow") : taskBox.classList.remove("overflow");
-    }
-    
+    }}
