@@ -49,14 +49,16 @@ let editId,           // Declaration of a variable named 'editId' (possibly used
         }
     
         // Set the innerHTML of 'taskBox' with the constructed HTML string or a message if no tasks
-        taskBox.innerHTML = liTag || `<span>You don't have any task here</span>`;
-    
+        taskBox.innerHTML = liTag || '<span>You don't have any task here</span>';
+
+
         // Select all elements with class "task" inside 'taskBox'
         let checkTask = taskBox.querySelectorAll(".task");
-    
+
         // If there are no tasks, remove the "active" class from 'clearAll'; otherwise, add the "active" class
         !checkTask.length ? clearAll.classList.remove("active") : clearAll.classList.add("active");
-    
+
         // If the height of 'taskBox' is greater than or equal to 300, add the "overflow" class; otherwise, remove it
         taskBox.offsetHeight >= 300 ? taskBox.classList.add("overflow") : taskBox.classList.remove("overflow");
-    }}
+        taskBox.offsetHeight >= 300 ? taskBox.classList.add("overflow") : taskBox.classList.remove("overflow");
+    }
